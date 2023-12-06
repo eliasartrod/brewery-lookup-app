@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing">8dp</dimen>
+    <dimen name="quarterSpacing">2dp</dimen>
+    <dimen name="halfSpacing">4dp</dimen>
+    <dimen name="doubleSpacing">16dp</dimen>
+    <dimen name="tripleSpacing">24dp</dimen>
+    <dimen name="quadSpacing">32dp</dimen>
+    <dimen name="progressIndicatorSize">50dp</dimen>
+
+    <dimen name="bubbleIndicatorSize">27dp</dimen>
+    <dimen name="bottom_navigation_height">50dp</dimen>
+
+    <dimen name="fourteen">14dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="emptyBarItem">44dp</dimen>
+
+    <dimen name="cardCornerRadius">2dp</dimen>
+    <dimen name="taskCardCornerRadius">4dp</dimen>
+    <dimen name="progressIndicatorHeight">8dp</dimen>
+
+</resources>

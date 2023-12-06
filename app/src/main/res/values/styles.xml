@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="MainAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="MainAppTheme.ToolbarTitle">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/knockout_liteweight</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MainAppTheme.BottomNavigationItem">
+        <item name="android:textColor">@color/bottom_navigation_text_color</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="MainAppTheme.DashboardSection">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MainAppTheme.TaskTitle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MainAppTheme.TaskDate">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/arialmt</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MainAppTheme.TaskDate.Day">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+    </style>
+
+    <style name="MainAppTheme.TaskDate.Month">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/arialmt_regular</item>
+    </style>
+
+    <style name="MainAppTheme.Button" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+    </style>
+
+    <style name="MainAppTheme.Button.Regular">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+    </style>
+
+    <style name="MainAppTheme.Button.Green" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/bg_button</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MainAppTheme.Button.White" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/button_white_text_color</item>
+        <item name="strokeColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="MainAppTheme.Button.Black" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+    <style name="MainAppTheme.Button.WhiteAndBlack" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/dark_gray</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/button_white_black_text_color</item>
+    </style>
+
+    <style name="MainAppTheme.Button.WhiteAndBlack.Borderless" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="strokeColor">@color/dark_gray</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/button_white_black_text_color</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+    </style>
+
+    <style name="MainAppTheme.Button.Red">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="backgroundTint">@color/davidson_orange</item>
+    </style>
+
+    <style name="MainAppTheme.Button.Dialog">
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="MainAppTheme.ActionBar.TextButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:padding">@dimen/spacing</item>
+        <item name="android:fontFamily">@font/arialmt</item>
+        <item name="android:textColor">@color/toolbar_button_text_color</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MainAppTheme.FilterTitle">
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MainAppTheme.FilterButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/arialmt</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/spacing</item>
+        <item name="android:textColor">@color/filter_buttom_text_color</item>
+        <item name="android:background">@drawable/bg_filter_button</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MainAppTheme.FilterButton.Radio">
+        <item name="android:button">@null</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="MainAppTheme.DialogFullScreen">
+        <item name="android:windowBackground">@color/translucent</item>
+    </style>
+
+    <style name="MainAppTheme.FilterSelection">
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MainAppTheme.EditText">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:padding">@dimen/spacing</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/silver_chalice</item>
+        <item name="android:fontFamily">@font/arialmt</item>
+    </style>
+    <style name="MainAppTheme.EditText.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MainAppTheme.InputTextLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimaryDark</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="android:layout_marginEnd">@dimen/doubleSpacing</item>
+        <item name="android:layout_marginLeft">@dimen/doubleSpacing</item>
+        <item name="android:layout_marginRight">@dimen/doubleSpacing</item>
+        <item name="android:layout_marginStart">@dimen/doubleSpacing</item>
+        <item name="android:layout_marginTop">@dimen/doubleSpacing</item>
+        <item name="hintEnabled">false</item>
+        <item name="expandedHintEnabled">false</item>
+    </style>
+
+    <style name="MainAppTheme.ProductDetail">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/arialmt</item>
+    </style>
+
+    <style name="MainAppTheme.ProductDetail.Item">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/arialmt</item>
+    </style>
+    <style name="MainAppTheme.ProductDetail.Description">
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="MainAppTheme.ProductDetail.StyleAndColor">
+        <item name="android:fontFamily">@font/arialmt</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="MainAppTheme.ProductDetail.InProgressIndicator">
+        <item name="android:fontFamily">@font/arialmt</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="MainAppTheme.ProductDetail.Size">
+        <item name="android:fontFamily">@font/arialmt</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="MainAppTheme.ProductDetail.Size.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MainAppTheme.AcceptRadioButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/radio_button_text_color</item>
+        <item name="android:background">@drawable/bg_radio_button_accept</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+    </style>
+    <style name="MainAppTheme.RejectRadioButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/radio_button_text_color</item>
+        <item name="android:background">@drawable/bg_radio_button_reject</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+    </style>
+    <style name="MainAppTheme.Version">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- ADDING T8 STYLES FROM HERE -->
+
+    <style name="MainAppTheme.PrinterOptionItem">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/arialmt_regular</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="MainAppTheme.ManifestText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/arialmt_regular</item>
+    </style>
+    <style name="MainAppTheme.ManifestText.ShippedDate">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+    </style>
+    <style name="MainAppTheme.ManifestText.BigCounter">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">@font/knockout_liteweight</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="MainAppTheme.ManifestText.BigCounter.Blue">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+    <style name="MainAppTheme.ManifestText.CounterLabel">
+        <item name="android:fontFamily">@font/knockout_liteweight</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MainAppTheme.ManifestText.CartonInfo">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MainAppTheme.ConfirmPickup">
+        <item name="fontFamily">@font/arialmt</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="MainAppTheme.ConfirmPickup.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/arialmt_bold</item>
+    </style>
+
+    <style name="MainAppTheme.EditText.Barcode" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:fontFamily">@font/knockout_liteweight</item>
+        <item name="android:background">@drawable/bg_button_location_white_blue</item>
+    </style>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="ToolbarTheme.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@font/knockout_liteweight</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="Theme.ToolbarTitle" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:lines">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/knockout_liteweight</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MainAppTheme.Button.DarkGray" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="backgroundTint">@color/dark_gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="MainAppTheme.Button.Gray" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/arialmt_bold</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="backgroundTint">@color/gray</item>
+    </style>
+</resources>

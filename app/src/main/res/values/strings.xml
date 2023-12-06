@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Brewery Lookup App</string>
+
+    <string name="error_message_format">Error, Reason: %s</string>
+    <string name="action_search">Search</string>
+    <string name="brewery_list_amount">Brewery Count: %d</string>
+</resources>
