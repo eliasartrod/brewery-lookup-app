@@ -8,6 +8,7 @@ interface BreweryLookupService {
 
     @GET("/v1/breweries/")
     suspend fun searchAllBreweries(
+        @Query("page") page: Int,
         @Query("per_page") perPage: Int?
     ): Result<List<NetworkBreweryListResponse>>
 }

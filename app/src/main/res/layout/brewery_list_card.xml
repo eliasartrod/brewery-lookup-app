@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/cardview_default_elevation"
+    app:cardBackgroundColor="@color/white"
+    android:layout_margin="@dimen/spacing">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/halfSpacing"
+        android:background="@drawable/card_view_background">
+
+        <TextView
+            android:id="@+id/brewery_name"
+            style="@style/MainAppTheme.ProductDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing"
+            android:layout_marginBottom="@dimen/spacing"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/brewery_location"
+            tools:text="180 and Tapped" />
+
+        <TextView
+            android:id="@+id/brewery_type"
+            style="@style/MainAppTheme.ProductDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/button_container_shadow_two"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Type: Micro" />
+
+        <View
+            android:background="@color/gray"
+            android:id="@+id/button_container_shadow_two"
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="@dimen/spacing"
+            android:layout_marginRight="@dimen/spacing"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@id/brewery_name"
+            app:layout_constraintBottom_toTopOf="@id/brewery_location"/>
+
+        <TextView
+            android:id="@+id/brewery_distance"
+            style="@style/MainAppTheme.ProductDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing"
+            android:layout_marginEnd="@dimen/spacing"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="6.2 Miles Away" />
+
+        <TextView
+            android:id="@+id/brewery_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing"
+            android:layout_marginEnd="@dimen/spacing"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="12sp"
+            tools:text="FlatIron Crossing \nBroomfield, CO 80021"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

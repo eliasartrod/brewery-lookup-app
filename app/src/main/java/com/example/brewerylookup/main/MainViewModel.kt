@@ -31,7 +31,7 @@ class MainViewModel @Inject constructor(
     fun searchAllBreweries() {
         viewModelScope.launch {
             _loading.value = Event(true)
-            val result = _breweryLookupRepository.searchAllBreweries(50)
+            val result = _breweryLookupRepository.searchAllBreweries(1,50)
             if (result.isSuccess) {
                 result.getOrNull()?.let {
                     _breweryList.value = it
@@ -43,7 +43,7 @@ class MainViewModel @Inject constructor(
                 _breweryList.value = listOf()
                 _snackBar.value = Event(message)
             }
+            _loading.value = Event(false)
         }
-        _loading.value = Event(false)
     }
 }

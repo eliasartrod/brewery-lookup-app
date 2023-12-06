@@ -4,4 +4,9 @@
     <string name="error_message_format">Error, Reason: %s</string>
     <string name="action_search">Search</string>
     <string name="brewery_list_amount">Brewery Count: %d</string>
+
+    <string name="brewery_location">%s</string>
+    <string name="brewery_name">Brewery Name: %s</string>
+    <string name="brewery_type">Type: %s</string>
+
 </resources>

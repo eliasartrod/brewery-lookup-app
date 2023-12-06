@@ -8,8 +8,9 @@ class BreweryLookupDataSource(
 ): NetworkDataSource {
 
     override suspend fun searchAllBreweries(
+        pageNumber: Int,
         amountPerPage: Int?
     ): Result<List<NetworkBreweryListResponse>> {
-        return breweryLookupService.searchAllBreweries(amountPerPage)
+        return breweryLookupService.searchAllBreweries(pageNumber, amountPerPage)
     }
 }

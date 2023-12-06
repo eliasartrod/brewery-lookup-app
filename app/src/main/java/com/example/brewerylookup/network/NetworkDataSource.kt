@@ -8,6 +8,7 @@ import com.example.brewerylookup.network.model.NetworkBreweryListResponse
 interface NetworkDataSource {
 
     suspend fun searchAllBreweries(
+        pageNumber: Int,
         amountPerPage: Int?
     ): Result<List<NetworkBreweryListResponse>>
 }

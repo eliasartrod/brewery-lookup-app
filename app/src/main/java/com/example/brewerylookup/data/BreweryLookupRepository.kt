@@ -9,9 +9,10 @@ class BreweryLookupRepository @Inject constructor(
 ) {
 
     suspend fun searchAllBreweries(
+        pageNumber: Int,
         amountPerPage: Int?
     ): Result<List<BreweryList>> {
-        return dataSource.searchAllBreweries(amountPerPage)
+        return dataSource.searchAllBreweries(pageNumber, amountPerPage)
             .map { BreweryList.fromNetwork(it) }
     }
 }
