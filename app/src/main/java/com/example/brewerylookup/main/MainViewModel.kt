@@ -34,6 +34,9 @@ class MainViewModel @Inject constructor(
             val result = _breweryLookupRepository.searchAllBreweries(1,50)
             if (result.isSuccess) {
                 result.getOrNull()?.let {
+                    if (_breweryList.value != null) {
+                        _breweryList.value = emptyList()
+                    }
                     _breweryList.value = it
                 }
             } else {
