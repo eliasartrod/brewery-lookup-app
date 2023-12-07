@@ -11,4 +11,12 @@ interface NetworkDataSource {
         pageNumber: Int,
         amountPerPage: Int?
     ): Result<List<NetworkBreweryListResponse>>
+
+    suspend fun searchByFilter(
+        breweryType: String?,
+        state: String?,
+        postalCode: String?,
+        city: String?,
+        breweryName: String?
+    ): Result<List<NetworkBreweryListResponse>>
 }

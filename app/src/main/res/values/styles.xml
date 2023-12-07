@@ -167,40 +167,40 @@
         <item name="expandedHintEnabled">false</item>
     </style>
 
-    <style name="MainAppTheme.ProductDetail">
+    <style name="MainAppTheme.Detail">
         <item name="android:textColor">@color/dark_gray</item>
         <item name="android:textSize">15sp</item>
         <item name="android:fontFamily">@font/arialmt</item>
     </style>
 
-    <style name="MainAppTheme.ProductDetail.Item">
+    <style name="MainAppTheme.Detail.Item">
         <item name="android:textColor">@color/dark_gray</item>
         <item name="android:textSize">12sp</item>
         <item name="android:fontFamily">@font/arialmt</item>
     </style>
-    <style name="MainAppTheme.ProductDetail.Description">
+    <style name="MainAppTheme.Detail.Description">
         <item name="android:ellipsize">end</item>
         <item name="android:fontFamily">@font/arialmt_bold</item>
         <item name="android:maxLines">4</item>
         <item name="android:textColor">@color/dark_gray</item>
         <item name="android:textSize">15sp</item>
     </style>
-    <style name="MainAppTheme.ProductDetail.StyleAndColor">
+    <style name="MainAppTheme.Detail.StyleAndColor">
         <item name="android:fontFamily">@font/arialmt</item>
         <item name="android:textColor">@color/dark_gray</item>
         <item name="android:textSize">12sp</item>
     </style>
-    <style name="MainAppTheme.ProductDetail.InProgressIndicator">
+    <style name="MainAppTheme.Detail.InProgressIndicator">
         <item name="android:fontFamily">@font/arialmt</item>
         <item name="android:textColor">@color/yellow</item>
         <item name="android:textSize">20sp</item>
     </style>
-    <style name="MainAppTheme.ProductDetail.Size">
+    <style name="MainAppTheme.Detail.Size">
         <item name="android:fontFamily">@font/arialmt</item>
         <item name="android:textColor">@color/dark_gray</item>
         <item name="android:textSize">12sp</item>
     </style>
-    <style name="MainAppTheme.ProductDetail.Size.Bold">
+    <style name="MainAppTheme.Detail.Size.Bold">
         <item name="android:textStyle">bold</item>
     </style>
     <style name="MainAppTheme.AcceptRadioButton" parent="Widget.AppCompat.Button.Borderless.Colored">

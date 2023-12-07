@@ -17,7 +17,7 @@
 
         <TextView
             android:id="@+id/brewery_name"
-            style="@style/MainAppTheme.ProductDetail"
+            style="@style/MainAppTheme.Detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing"
@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/brewery_type"
-            style="@style/MainAppTheme.ProductDetail"
+            style="@style/MainAppTheme.Detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing"
@@ -59,7 +59,7 @@
 
         <TextView
             android:id="@+id/brewery_distance"
-            style="@style/MainAppTheme.ProductDetail"
+            style="@style/MainAppTheme.Detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing"

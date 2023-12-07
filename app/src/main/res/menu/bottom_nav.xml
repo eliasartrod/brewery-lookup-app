@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/brewery_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_list"
+        android:title="@string/bottom_nav_list_title" />
+
+    <item
+        android:id="@+id/brewery_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_search"
+        android:title="@string/bottom_nav_search_list" />
+
+</menu>

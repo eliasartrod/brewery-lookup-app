@@ -15,4 +15,15 @@ class BreweryLookupRepository @Inject constructor(
         return dataSource.searchAllBreweries(pageNumber, amountPerPage)
             .map { BreweryList.fromNetwork(it) }
     }
+
+    suspend fun searchByFilter(
+        breweryType: String?,
+        state: String?,
+        postalCode: String?,
+        city: String?,
+        breweryName: String?
+    ): Result<List<BreweryList>> {
+        return dataSource.searchByFilter(breweryType, state, postalCode, city, breweryName)
+            .map { BreweryList.fromNetwork(it) }
+    }
 }

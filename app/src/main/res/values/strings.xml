@@ -1,12 +1,36 @@
 <resources>
     <string name="app_name">Brewery Lookup App</string>
 
+    <string name="bottom_nav_list_title">Brewery List</string>
+    <string name="bottom_nav_search_list">Search Specific Brewery</string>
+    <string name="brewery_list_page_title">Full Brewery List</string>
+    <string name="brewery_search_page_title">Search for Brewery</string>
+
     <string name="error_message_format">Error, Reason: %s</string>
+    <string name="error_message_no_results">No Breweries Found! \nPlease Try Again!</string>
+
     <string name="action_search">Search</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_apply">Apply</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_no_filter">Load Default (Full Brewery List)</string>
+    <string name="action_next_page">Next</string>
+    <string name="action_previous_page">Previous</string>
+
     <string name="brewery_list_amount">Brewery Count: %d</string>
 
     <string name="brewery_location">%s</string>
-    <string name="brewery_name">Brewery Name: %s</string>
+    <string name="brewery_name">%s</string>
     <string name="brewery_type">Type: %s</string>
 
+    <string name="empty_brewery_address">No Address Present</string>
+    <string name="empty_brewery_type">No Type</string>
+    <string name="empty_brewery_name">No Name Present</string>
+
+    <string name="filter_by_type">Select Brewery Type:</string>
+    <string name="filter_by_city">Enter City:</string>
+    <string name="filter_by_state">Select State:</string>
+    <string name="filter_by_postal">Enter Postal:</string>
+    <string name="filter_by_name">Enter Name:</string>
 </resources>
