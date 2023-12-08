@@ -61,10 +61,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewFilterPostalCode"
-        android:layout_marginTop="8dp"
-        android:inputType="text"
+        android:layout_marginTop="16dp"
         android:background="@android:drawable/edit_text"
-        android:padding="8dp"/>
+        android:inputType="text"
+        android:padding="8dp" />
 
     <TextView
         style="@style/MainAppTheme.Detail.Size.Bold"

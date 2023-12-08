@@ -15,4 +15,11 @@
         android:icon="@drawable/ic_search"
         android:title="@string/bottom_nav_search_list" />
 
+    <item
+        android:id="@+id/brewery_map_it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_map_brewery"
+        android:title="@string/brewery_map_it" />
+
 </menu>

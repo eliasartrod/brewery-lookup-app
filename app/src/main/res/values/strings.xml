@@ -2,12 +2,14 @@
     <string name="app_name">Brewery Lookup App</string>
 
     <string name="bottom_nav_list_title">Brewery List</string>
-    <string name="bottom_nav_search_list">Search Specific Brewery</string>
+    <string name="bottom_nav_search_list">Search Brewery</string>
     <string name="brewery_list_page_title">Full Brewery List</string>
     <string name="brewery_search_page_title">Search for Brewery</string>
+    <string name="brewery_map_it">Map to Brewery</string>
 
     <string name="error_message_format">Error, Reason: %s</string>
     <string name="error_message_no_results">No Breweries Found! \nPlease Try Again!</string>
+    <string name="error_message_map_permission">Location Permission Denied</string>
 
     <string name="action_search">Search</string>
     <string name="action_filter">Filter</string>
@@ -33,4 +35,5 @@
     <string name="filter_by_state">Select State:</string>
     <string name="filter_by_postal">Enter Postal:</string>
     <string name="filter_by_name">Enter Name:</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

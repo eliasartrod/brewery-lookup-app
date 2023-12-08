@@ -63,12 +63,12 @@ class SearchBreweryFragment : BaseFragment() {
     private fun setupMenu() {
         (requireActivity() as MenuHost).addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                menuInflater.inflate(R.menu.filter_menu, menu)
+                menuInflater.inflate(R.menu.search_menu, menu)
             }
 
             override fun onMenuItemSelected(item: MenuItem): Boolean {
                 when (item.itemId) {
-                    R.id.action_filter -> {
+                    R.id.action_search -> {
                         val dialog = FilterFragment()
                         dialog.show(childFragmentManager, "filter")
                         return true

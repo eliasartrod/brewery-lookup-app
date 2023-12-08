@@ -1,16 +1,21 @@
 package com.example.inventory.common
 
+import android.Manifest
+import android.Manifest.permission.ACCESS_FINE_LOCATION
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.brewerylookup.databinding.ActivityToolbarBinding
 import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.disposables.CompositeDisposable
 
 @AndroidEntryPoint
 open class BaseActivity : AppCompatActivity() {
-
     var compositeDisposable = CompositeDisposable()
     var binding: ActivityToolbarBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {

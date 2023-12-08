@@ -42,6 +42,8 @@ class FullBreweryListFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setActionBarTitle(getString(R.string.app_name))
 
+        setupMenu()
+
         viewModel.loading.observe(viewLifecycleOwner) { setupLoading(it) }
         viewModel.snackBar.observe(viewLifecycleOwner) { showSnackBar(it) }
         viewModel.breweryList.observe(viewLifecycleOwner) { setupBreweryList(it) }
@@ -64,6 +66,25 @@ class FullBreweryListFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
         viewModel.searchAllBreweries(1, 10)
+    }
+
+    private fun setupMenu() {
+        (requireActivity() as MenuHost).addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.filter_menu, menu)
+            }
+
+            override fun onMenuItemSelected(item: MenuItem): Boolean {
+                when (item.itemId) {
+                    R.id.action_filter -> {
+                        val dialog = FilterFragment()
+                        dialog.show(childFragmentManager, "filter")
+                        return true
+                    }
+                }
+                return false
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 
     private fun setupPageButtons(pageNumber: Int) {

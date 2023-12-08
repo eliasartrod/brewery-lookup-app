@@ -5,6 +5,7 @@ import android.view.*
 import com.example.brewerylookup.R
 import com.example.brewerylookup.databinding.FragmentMainBinding
 import com.example.brewerylookup.main.bottomnavpages.FullBreweryListFragment
+import com.example.brewerylookup.main.bottomnavpages.MapsFragment
 import com.example.brewerylookup.main.bottomnavpages.SearchBreweryFragment
 import com.example.inventory.common.BaseFragment
 import com.example.inventory.utils.ActivityUtils
@@ -60,6 +61,14 @@ class MainFragment : BaseFragment() {
                     ActivityUtils.replaceFragment(
                         childFragmentManager,
                         SearchBreweryFragment(),
+                        R.id.subFragmentContainer
+                    )
+                    true
+                }
+                R.id.brewery_map_it -> {
+                    ActivityUtils.replaceFragment(
+                        childFragmentManager,
+                        MapsFragment(),
                         R.id.subFragmentContainer
                     )
                     true
