@@ -1,10 +1,13 @@
 package com.example.brewerylookup.network
 
 import com.example.brewerylookup.network.model.NetworkBreweryListResponse
+import com.example.brewerylookup.network.model.NetworkDirectionsResponse
 import com.example.brewerylookup.network.retrofit.BreweryLookupService
+import com.example.brewerylookup.network.retrofit.GoogleMapsService
 
 class BreweryLookupDataSource(
-    private val breweryLookupService: BreweryLookupService
+    private val breweryLookupService: BreweryLookupService,
+    private val googleMapsService: GoogleMapsService
 ): NetworkDataSource {
 
     override suspend fun searchAllBreweries(
@@ -41,5 +44,13 @@ class BreweryLookupDataSource(
             params["by_name"] = breweryName
         }
         return breweryLookupService.searchByFilter(params)
+    }
+
+    override suspend fun getDirections(
+        startingAddress: String,
+        destinationAddress: String,
+        apiKey: String
+    ): Result<NetworkDirectionsResponse> {
+        return googleMapsService.getDirections(destinationAddress, startingAddress, apiKey)
     }
 }

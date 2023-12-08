@@ -1,6 +1,7 @@
 package com.example.brewerylookup.network
 
 import com.example.brewerylookup.network.model.NetworkBreweryListResponse
+import com.example.brewerylookup.network.model.NetworkDirectionsResponse
 
 /**
  * Definition of network access data methods
@@ -19,4 +20,10 @@ interface NetworkDataSource {
         city: String?,
         breweryName: String?
     ): Result<List<NetworkBreweryListResponse>>
+
+    suspend fun getDirections(
+        startingAddress: String,
+        destinationAddress: String,
+        apiKey: String
+    ): Result<NetworkDirectionsResponse>
 }

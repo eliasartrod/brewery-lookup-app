@@ -10,6 +10,8 @@
     <string name="error_message_format">Error, Reason: %s</string>
     <string name="error_message_no_results">No Breweries Found! \nPlease Try Again!</string>
     <string name="error_message_map_permission">Location Permission Denied</string>
+    <string name="error_message_empty_address">Address Required!</string>
+    <string name="error_message_no_route_found">No Route Found!</string>
 
     <string name="action_search">Search</string>
     <string name="action_filter">Filter</string>
@@ -19,6 +21,7 @@
     <string name="action_no_filter">Load Default (Full Brewery List)</string>
     <string name="action_next_page">Next</string>
     <string name="action_previous_page">Previous</string>
+    <string name="action_find_directions">Find Directions</string>
 
     <string name="brewery_list_amount">Brewery Count: %d</string>
 
@@ -36,4 +39,7 @@
     <string name="filter_by_postal">Enter Postal:</string>
     <string name="filter_by_name">Enter Name:</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="starting_address_hint">Starting Address</string>
+    <string name="destination_address_hint">Destination Address</string>
 </resources>

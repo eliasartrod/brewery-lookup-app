@@ -1,6 +1,7 @@
 package com.example.brewerylookup.data
 
 import com.example.brewerylookup.model.BreweryList
+import com.example.brewerylookup.model.Directions
 import com.example.brewerylookup.network.NetworkDataSource
 import javax.inject.Inject
 
@@ -25,5 +26,14 @@ class BreweryLookupRepository @Inject constructor(
     ): Result<List<BreweryList>> {
         return dataSource.searchByFilter(breweryType, state, postalCode, city, breweryName)
             .map { BreweryList.fromNetwork(it) }
+    }
+
+    suspend fun getDirections(
+        startingAddress: String,
+        destinationAddress: String,
+        apiKey: String
+    ): Result<Directions?> {
+        return dataSource.getDirections(startingAddress, destinationAddress, apiKey)
+            .map { Directions.fromNetwork(it) }
     }
 }

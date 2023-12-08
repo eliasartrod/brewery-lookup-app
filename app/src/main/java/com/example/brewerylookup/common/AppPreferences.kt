@@ -24,11 +24,16 @@ class AppPreferences(private val preferences: SharedPreferences, private val gso
         get() = preferences.getString(PREF_FILTERED_CITY, "") ?: ""
         set(value) = preferences.edit().putString(PREF_FILTERED_CITY, value).apply()
 
+    var apiKey: String?
+        get() = preferences.getString(PREF_API_KEY, "") ?: ""
+        set(value) = preferences.edit().putString(PREF_API_KEY, value).apply()
+
     companion object {
         var PREF_IS_FILTERED = "pref.is.filtered"
         var PREF_FILTERED_BREWERY_TYPE = "pref.filtered.brewery.type"
         var PREF_FILTERED_STATE = "pref.filtered.state"
         var PREF_FILTERED_POSTAL_CODE = "pref.filtered.postal.code"
         var PREF_FILTERED_CITY = "pref.filtered.city"
+        var PREF_API_KEY = "pref.api.key"
     }
 }

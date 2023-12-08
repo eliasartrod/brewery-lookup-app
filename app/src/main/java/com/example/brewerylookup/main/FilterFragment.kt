@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import com.example.brewerylookup.databinding.FragmentFilterBinding
-import com.example.brewerylookup.model.FilterModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

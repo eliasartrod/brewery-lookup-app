@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.brewerylookup.R
 import com.example.brewerylookup.data.BreweryLookupRepository
 import com.example.brewerylookup.model.BreweryList
+import com.example.brewerylookup.model.Directions
 import com.example.inventory.common.AppPreferences
 import com.example.inventory.common.Event
 import com.example.inventory.common.SnackBarMessage
@@ -23,10 +24,13 @@ class MainViewModel @Inject constructor(
     private val _snackBar = MutableLiveData<Event<SnackBarMessage>>()
     private val _breweryList = MutableLiveData<List<BreweryList>>()
     private val _currentPageLiveData = MutableLiveData<Int>()
+    private val _directionsResult = MutableLiveData<Directions?>()
+    private var _apiKey: String? = null
 
     val loading: LiveData<Event<Boolean?>> = _loading
     val snackBar: LiveData<Event<SnackBarMessage>> = _snackBar
-    val currentPageLiveData: LiveData<Int> = _currentPageLiveData // Expose the LiveData
+    val currentPageLiveData: LiveData<Int> = _currentPageLiveData
+    val directionsResult: LiveData<Directions?> = _directionsResult
     val breweryList = _breweryList
 
     private var currentPage = 1
@@ -114,6 +118,30 @@ class MainViewModel @Inject constructor(
                 }
                 _loading.value = Event(false)
             }
+        }
+    }
+
+    fun setApiKey() {
+        _appPreferences.apiKey = "AIzaSyA5e_5QRVEqbL3S0PiN9hnBeY0bPO2JGJQ"
+    }
+
+    fun searchDirections(startingAddress: String, destinationAddress: String) {
+        viewModelScope.launch {
+            _loading.value = Event(true)
+            _apiKey = "AIzaSyA5e_5QRVEqbL3S0PiN9hnBeY0bPO2JGJQ"
+            val result = _breweryLookupRepository.getDirections(startingAddress, destinationAddress, _apiKey!!)
+            if (result.isSuccess) {
+                result.getOrNull().let {
+                    _directionsResult.value = it
+                }
+            } else {
+                _directionsResult.value = null
+                val error = result.exceptionOrNull()
+                val message = SnackBarMessage(R.string.error_message_format)
+                error?.localizedMessage?.let { message.addFormattedMessage(it) }
+                _snackBar.value = Event(message)
+            }
+            _loading.value = Event(false)
         }
     }
 
