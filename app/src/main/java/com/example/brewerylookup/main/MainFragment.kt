@@ -65,14 +65,15 @@ class MainFragment : BaseFragment() {
                     )
                     true
                 }
-                R.id.brewery_map_it -> {
+                // TODO: Re-implement later on
+                /*R.id.brewery_map_it -> {
                     ActivityUtils.replaceFragment(
                         childFragmentManager,
                         MapsFragment(),
                         R.id.subFragmentContainer
                     )
                     true
-                }
+                }*/
                 else -> false
             }
         }

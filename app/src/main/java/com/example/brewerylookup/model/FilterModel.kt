@@ -4,5 +4,6 @@ data class FilterModel(
     val breweryType: String?,
     val state: String?,
     val postalCode: String?,
-    val city: String?
+    val city: String?,
+    val breweryName: String?
 )

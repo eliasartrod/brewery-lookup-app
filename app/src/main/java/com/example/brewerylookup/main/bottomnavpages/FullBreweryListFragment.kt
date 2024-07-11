@@ -2,16 +2,12 @@ package com.example.brewerylookup.main.bottomnavpages
 
 import android.os.Bundle
 import android.view.*
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.brewerylookup.R
 import com.example.brewerylookup.databinding.BreweryListCardBinding
 import com.example.brewerylookup.databinding.FragmentFullBreweryListBinding
-import com.example.brewerylookup.main.FilterFragment
 import com.example.brewerylookup.main.MainViewModel
 import com.example.brewerylookup.model.BreweryList
 import com.example.inventory.common.BaseFragment
@@ -42,8 +38,6 @@ class FullBreweryListFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setActionBarTitle(getString(R.string.app_name))
 
-        setupMenu()
-
         viewModel.loading.observe(viewLifecycleOwner) { setupLoading(it) }
         viewModel.snackBar.observe(viewLifecycleOwner) { showSnackBar(it) }
         viewModel.breweryList.observe(viewLifecycleOwner) { setupBreweryList(it) }
@@ -66,25 +60,6 @@ class FullBreweryListFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
         viewModel.searchAllBreweries(1, 10)
-    }
-
-    private fun setupMenu() {
-        (requireActivity() as MenuHost).addMenuProvider(object : MenuProvider {
-            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                menuInflater.inflate(R.menu.filter_menu, menu)
-            }
-
-            override fun onMenuItemSelected(item: MenuItem): Boolean {
-                when (item.itemId) {
-                    R.id.action_filter -> {
-                        val dialog = FilterFragment()
-                        dialog.show(childFragmentManager, "filter")
-                        return true
-                    }
-                }
-                return false
-            }
-        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 
     private fun setupPageButtons(pageNumber: Int) {

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.brewerylookup.R
 import com.example.brewerylookup.databinding.BreweryListCardBinding
 import com.example.brewerylookup.databinding.FragmentSearchBreweryBinding
-import com.example.brewerylookup.main.FilterFragment
+import com.example.brewerylookup.main.BreweryFilterFragment
 import com.example.brewerylookup.main.MainViewModel
 import com.example.brewerylookup.model.BreweryList
 import com.example.inventory.common.BaseFragment
@@ -56,20 +56,20 @@ class SearchBreweryFragment : BaseFragment() {
     }
 
     private fun showDialog() {
-        val dialog = FilterFragment()
+        val dialog = BreweryFilterFragment()
         dialog.show(childFragmentManager, "filter")
     }
 
     private fun setupMenu() {
         (requireActivity() as MenuHost).addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                menuInflater.inflate(R.menu.search_menu, menu)
+                menuInflater.inflate(R.menu.filter_menu, menu)
             }
 
             override fun onMenuItemSelected(item: MenuItem): Boolean {
                 when (item.itemId) {
-                    R.id.action_search -> {
-                        val dialog = FilterFragment()
+                    R.id.action_filter -> {
+                        val dialog = BreweryFilterFragment()
                         dialog.show(childFragmentManager, "filter")
                         return true
                     }

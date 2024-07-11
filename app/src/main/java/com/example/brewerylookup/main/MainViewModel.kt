@@ -13,12 +13,14 @@ import com.example.inventory.common.Event
 import com.example.inventory.common.SnackBarMessage
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
     private val _appPreferences: AppPreferences,
-    private val _breweryLookupRepository: BreweryLookupRepository
+    private val _breweryLookupRepository: BreweryLookupRepository,
+    val filter: BreweryFilter
 ): ViewModel() {
     private val _loading = MutableLiveData<Event<Boolean?>>()
     private val _snackBar = MutableLiveData<Event<SnackBarMessage>>()
@@ -56,15 +58,20 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    fun searchByFilter(breweryType: String?, state: String?, postalCode: String?, city: String?, breweryName: String?) {
+    fun searchByFilter(breweryFilter: BreweryFilter) {
         viewModelScope.launch {
             _loading.value = Event(true)
-
-            val result = _breweryLookupRepository.searchByFilter(breweryType, state, postalCode, city, breweryName)
+            val result = _breweryLookupRepository.searchByFilter(
+                breweryFilter.breweryType,
+                breweryFilter.breweryState,
+                breweryFilter.breweryPostalCode,
+                breweryFilter.breweryCity,
+                breweryFilter.breweryName
+            )
             if (result.isSuccess) {
                 result.getOrNull()?.let {
                     _breweryList.value = emptyList()
-                    _breweryList.value = it
+                    updateFilter(it)
                 }
             } else {
                 val error = result.exceptionOrNull()
@@ -119,6 +126,12 @@ class MainViewModel @Inject constructor(
                 _loading.value = Event(false)
             }
         }
+    }
+
+    private fun updateFilter(breweries: List<BreweryList>) {
+        val filteredBreweries = breweries.filter { filter.matchesFilter(it) }
+        Timber.d("List Size: ", filteredBreweries.size)
+        _breweryList.value = filteredBreweries
     }
 
     fun setApiKey() {

@@ -10,7 +10,7 @@ import com.example.brewerylookup.databinding.FragmentFilterBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FilterFragment : DialogFragment() {
+class BreweryFilterFragment : DialogFragment() {
     private lateinit var binding: FragmentFilterBinding
 
     private val viewModel: MainViewModel by viewModels(ownerProducer = { requireParentFragment() })
@@ -28,14 +28,18 @@ class FilterFragment : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.actionApply.setOnClickListener {
-            // Create a FilterModel with the selected filter parameters
-            viewModel.searchByFilter(
-                binding.spinnerBreweryType.selectedItem?.toString(),
-                binding.spinnerState.selectedItem?.toString(),
-                binding.editTextPostalCode.text?.toString(),
-                binding.editTextCity.text?.toString(),
-                binding.editTextName.text?.toString()
-            )
+            // Update the filter parameters in the BreweryFilter instance
+            val breweryFilter = viewModel.filter
+
+            breweryFilter.breweryType = binding.spinnerBreweryType.selectedItem?.toString()
+            breweryFilter.breweryState = binding.spinnerState.selectedItem?.toString()
+            breweryFilter.breweryPostalCode = binding.editTextPostalCode.text?.toString()
+            breweryFilter.breweryCity = binding.editTextCity.text?.toString()
+            breweryFilter.breweryName = binding.editTextName.text?.toString()
+
+            // Perform the search with the updated filter
+            viewModel.searchByFilter(breweryFilter)
+
             dismiss()
         }
 
@@ -51,6 +55,6 @@ class FilterFragment : DialogFragment() {
     }
 
     private fun loadDefault() {
-        viewModel.searchAllBreweries(1, 5000)
+        viewModel.searchAllBreweries(1, 10)
     }
 }
